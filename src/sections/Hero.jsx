@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Button from '../components/ui/Button';
-import heroBg from '../assets/meroheader.png';
+import heroBg from '../assets/headerm.png';
 
 const Hero = () => {
     return (
         <section
             id="hero"
             className="relative min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
-            style={{ backgroundImage: `url(${heroBg})` }}
+            style={{ backgroundImage: `url(${heroBg})`, backgroundAttachment: 'fixed' }}
         >
             {/* Dark Overlay */}
             <div className="absolute inset-0 bg-black/40 z-0"></div>
@@ -21,9 +21,9 @@ const Hero = () => {
                     transition={{ duration: 0.8 }}
                 >
                     <span className="text-gray-300 font-medium tracking-widest uppercase mb-4 block text-sm md:text-base">UI/UX Designer</span>
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
-                        Hello, I'm <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Merna</span>.
+                    <h1 className="text-5xl text-left md:text-7xl lg:text-8xl font-bold leading-tight mb-6">
+                        Hello, <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">I'm Merna</span>.
                     </h1>
                     <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto leading-relaxed">
                         Experienced UI/UX Designer with over 1 year of experience, currently working as a Junior UI/UX Designer at Kroo. Passionate about creating user-centered, accessible, and visually clean digital experiences.
