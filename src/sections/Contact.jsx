@@ -35,8 +35,8 @@ const Contact = () => {
                     <ContactItem
                         icon={Mail}
                         title="Email"
-                        value="merna@example.com"
-                        link="mailto:merna@example.com"
+                        value="mernagalal81@gmail.com"
+                        link="mailto:mernagalal81@gmail.com"
                     />
                     <ContactItem
                         icon={Linkedin}
@@ -44,12 +44,12 @@ const Contact = () => {
                         value="linkedin.com/in/merna"
                         link="#"
                     />
-                    <ContactItem
+                    {/* <ContactItem
                         icon={Globe}
                         title="Behance"
                         value="behance.net/merna"
                         link="#"
-                    />
+                    /> */}
                     <ContactItem
                         icon={MapPin}
                         title="Location"
@@ -63,7 +63,7 @@ const Contact = () => {
                     <p className="text-gray-400 mb-8">
                         Feel free to reach out for collaborations or just a friendly hello.
                     </p>
-                    <Button variant="secondary" onClick={() => window.location.href = 'mailto:merna@example.com'}>
+                    <Button variant="secondary" onClick={() => window.location.href = 'mailto:mernagalal81@gmail.com'}>
                         Send me an email
                     </Button>
                 </div>

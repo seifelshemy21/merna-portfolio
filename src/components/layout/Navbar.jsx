@@ -66,7 +66,11 @@ const Navbar = () => {
                                     key={item.name}
                                     href={item.href}
                                     className="text-lg font-medium hover:text-blue-500"
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        document.querySelector(item.href).scrollIntoView({ behavior: 'smooth' });
+                                        setIsOpen(false);
+                                    }}
                                 >
                                     {item.name}
                                 </a>
