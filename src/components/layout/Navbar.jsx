@@ -68,9 +68,19 @@ const Navbar = () => {
                                     className="text-lg font-medium hover:text-blue-500"
                                     onClick={(e) => {
                                         e.preventDefault();
-                                        document.querySelector(item.href).scrollIntoView({ behavior: 'smooth' });
+
+                                        const id = item.href.replace('#', '');
+
                                         setIsOpen(false);
+
+                                        setTimeout(() => {
+                                            const section = document.getElementById(id);
+                                            if (section) {
+                                                section.scrollIntoView({ behavior: 'smooth' });
+                                            }
+                                        }, 100);
                                     }}
+
                                 >
                                     {item.name}
                                 </a>
