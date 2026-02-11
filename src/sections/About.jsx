@@ -3,7 +3,7 @@ import SectionTitle from '../components/ui/SectionTitle';
 
 const About = () => {
     return (
-        <section id="about" className="py-20 bg-gray-50">
+        <section id="about" className="py-20 bg-gray-50 z-20">
             <div className="max-w-4xl mx-auto px-6">
                 <SectionTitle title="About Me" subtitle="Who I Am" />
 
