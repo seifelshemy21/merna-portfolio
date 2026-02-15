@@ -13,7 +13,7 @@ const ProjectCard = ({ title, description, image, link, className = '' }) => {
                 <img
                     src={image}
                     alt={title}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-full h-full object-center transition-transform duration-500 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/10 hover:bg-black/0 transition-colors duration-300"></div>
             </div>
