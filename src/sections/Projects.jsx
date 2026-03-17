@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionTitle from '../components/ui/SectionTitle';
 import ProjectCard from '../components/ui/ProjectCard';
-import kroo_project from '../assets/kroo_project.png'
+import kroo_project from '../assets/kroo-project-img.jpeg'
 import oasis_project from '../assets/oasis_project.png'
 import hyundai_project from '../assets/hyundai_project.png'
 
@@ -20,8 +20,8 @@ const projectsData = [
         link: 'https://www.figma.com/design/dvhK1fGEJM3NzFZfZOFBQ2/kroo?node-id=0-1&t=7tIkIiahdX194d2f-1' // Placeholder link
     },
     {
-        title: 'Hyundai App',
-        description: 'Lead designer for key features within the Hyundai mobile application. Focused on improving user retention through gamified saving goals and intuitive spending analysis dashboards. Collaborated closely with Hyundai developers.',
+        title: 'Hyundai Photo Booth',
+        description: 'Lead designer for key features within the Hyundai photo booth. Focused on improving user engagement and creating a seamless and intuitive experience for users to capture and share their photos. Collaborated closely with Hyundai developers.',
         image: hyundai_project,
         link: 'https://www.figma.com/design/Ux9T7KoPki5ok432YkUrNj/hyundai?node-id=0-1&t=vGa8nNbdgIR0AUVl-1' // Placeholder link
     }

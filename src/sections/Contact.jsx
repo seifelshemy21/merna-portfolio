@@ -41,8 +41,8 @@ const Contact = () => {
                     <ContactItem
                         icon={Linkedin}
                         title="LinkedIn"
-                        value="linkedin.com/in/merna"
-                        link="#"
+                        value="Merna Galal"
+                        link="https://www.linkedin.com/in/merna-galal-bb6192381"
                     />
                     {/* <ContactItem
                         icon={Globe}
