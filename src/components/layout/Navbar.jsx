@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
+    { name: 'Services', href: '#skills' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Skills', href: '#skills' },
+    { name: 'Clients', href: '#experience' },
+    { name: 'About Me', href: '#about' },
     { name: 'Contact', href: '#contact' },
 ];
 
@@ -16,26 +16,48 @@ const Navbar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            setScrolled(window.scrollY > 30);
         };
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        const id = href.replace('#', '');
+        setIsOpen(false);
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
-        <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-sm py-4' : 'bg-transparent py-6 text-white'}`}>
-            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-                <a href="#hero" className="text-2xl font-bold tracking-tighter">
-                    MERNA<span className="text-blue-500">.</span>
+        <nav
+            className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+                scrolled
+                    ? 'bg-ivory/95 backdrop-blur-md border-b border-champagne/40 shadow-xs py-4 text-charcoal'
+                    : 'bg-transparent py-6 text-charcoal'
+            }`}
+        >
+            <div className="max-w-7xl mx-auto px-6 sm:px-10 flex justify-between items-center">
+                {/* Logo / Name on the left */}
+                <a
+                    href="#hero"
+                    onClick={(e) => handleNavClick(e, '#hero')}
+                    className="font-serif text-2xl font-bold tracking-tight text-charcoal hover:opacity-85 transition-opacity"
+                >
+                    Merna<span className="text-gold font-sans">.</span>
                 </a>
 
-                {/* Desktop Menu */}
-                <div className="hidden md:flex space-x-8">
+                {/* Navigation links on the right (Desktop) */}
+                <div className="hidden md:flex items-center space-x-9">
                     {navItems.map((item) => (
                         <a
                             key={item.name}
                             href={item.href}
-                            className="text-sm font-medium hover:text-blue-500 transition-colors"
+                            onClick={(e) => handleNavClick(e, item.href)}
+                            className="text-sm font-medium text-charcoal/80 hover:text-gold transition-colors tracking-wide"
                         >
                             {item.name}
                         </a>
@@ -44,43 +66,30 @@ const Navbar = () => {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden p-2"
+                    className="md:hidden p-2 text-charcoal focus:outline-hidden"
                     onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle menu"
                 >
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </div>
 
-            {/* Mobile Menu Overlay */}
+            {/* Mobile Navigation Drawer */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden bg-white text-black border-b absolute w-full overflow-hidden"
+                        className="md:hidden bg-ivory-light/98 text-charcoal border-b border-champagne/50 shadow-md absolute top-full left-0 w-full overflow-hidden"
                     >
-                        <div className="px-6 py-4 flex flex-col space-y-4">
+                        <div className="px-8 py-6 flex flex-col space-y-4">
                             {navItems.map((item) => (
                                 <a
                                     key={item.name}
                                     href={item.href}
-                                    className="text-lg font-medium hover:text-blue-500"
-                                    onClick={(e) => {
-                                        e.preventDefault();
-
-                                        const id = item.href.replace('#', '');
-
-                                        setIsOpen(false);
-
-                                        setTimeout(() => {
-                                            const section = document.getElementById(id);
-                                            if (section) {
-                                                section.scrollIntoView({ behavior: 'smooth' });
-                                            }
-                                        }, 100);
-                                    }}
-
+                                    className="text-base font-medium text-charcoal hover:text-gold transition-colors py-1 border-b border-champagne/20"
+                                    onClick={(e) => handleNavClick(e, item.href)}
                                 >
                                     {item.name}
                                 </a>

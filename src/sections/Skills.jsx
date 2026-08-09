@@ -1,31 +1,34 @@
 import React from 'react';
 import SectionTitle from '../components/ui/SectionTitle';
-import { PenTool, Box, CheckSquare, Layers, Layout, Grid, RefreshCw } from 'lucide-react';
+import { PenTool, Box, RefreshCw } from 'lucide-react';
 
-const SkillCategory = ({ title, skills, icon: Icon }) => (
-    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
-        <div className="flex items-center gap-3 mb-6 pb-4 border-b border-gray-100">
-            <div className="p-2 bg-gray-50 rounded-lg">
-                <Icon size={24} className="text-black" />
+const SkillCategory = ({ title, skills, icon: Icon }) => {
+    const IconComponent = Icon;
+    return (
+        <div className="bg-ivory-light p-8 rounded-2xl shadow-sm border border-champagne/40 hover:shadow-lg transition-all duration-300">
+            <div className="flex items-center gap-3 mb-6 pb-4 border-b border-champagne/30">
+                <div className="p-2 bg-blush/20 rounded-lg">
+                    <IconComponent size={24} className="text-rose" />
+                </div>
+                <h3 className="text-xl font-bold text-charcoal">{title}</h3>
             </div>
-            <h3 className="text-xl font-bold">{title}</h3>
+            <div className="flex flex-wrap gap-2">
+                {skills.map((skill) => (
+                    <span
+                        key={skill}
+                        className="px-3 py-1 bg-ivory text-charcoal rounded-full text-sm font-medium border border-champagne/60 hover:border-rose transition-colors"
+                    >
+                        {skill}
+                    </span>
+                ))}
+            </div>
         </div>
-        <div className="flex flex-wrap gap-2">
-            {skills.map((skill) => (
-                <span
-                    key={skill}
-                    className="px-3 py-1 bg-gray-50 text-gray-700 rounded-full text-sm font-medium border border-gray-200"
-                >
-                    {skill}
-                </span>
-            ))}
-        </div>
-    </div>
-);
+    );
+};
 
 const Skills = () => {
     return (
-        <section id="skills" className="py-20 bg-white">
+        <section id="skills" className="py-20 bg-ivory">
             <div className="max-w-7xl mx-auto px-6">
                 <SectionTitle title="Skills & Tools" subtitle="My Expertise" />
 

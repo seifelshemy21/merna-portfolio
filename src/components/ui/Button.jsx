@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Button = ({ children, onClick, variant = 'primary', className = '', ...props }) => {
-    const baseStyles = "px-6 py-3 rounded-full font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2";
+    const baseStyles = "px-6 py-3 rounded-full font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose/40";
 
     const variants = {
-        primary: "bg-black text-white hover:bg-gray-800 focus:ring-black shadow-lg hover:shadow-xl",
-        secondary: "bg-white text-black border border-gray-200 hover:border-black hover:bg-gray-50 focus:ring-gray-200",
-        outline: "border-2 border-black text-black hover:bg-black hover:text-white"
+        primary: "bg-charcoal text-ivory hover:bg-rose hover:text-ivory focus:ring-charcoal shadow-lg hover:shadow-xl",
+        secondary: "bg-ivory-light text-charcoal border border-champagne hover:border-rose hover:bg-ivory focus:ring-champagne",
+        outline: "border-2 border-charcoal text-charcoal hover:bg-charcoal hover:text-ivory"
     };
 
     return (

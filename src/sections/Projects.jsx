@@ -4,6 +4,7 @@ import ProjectCard from '../components/ui/ProjectCard';
 import kroo_project from '../assets/kroo-project-img.jpeg'
 import oasis_project from '../assets/oasis_project.png'
 import hyundai_project from '../assets/hyundai_project.png'
+import enppi_project from '../assets/enppi_project.png'
 
 
 const projectsData = [
@@ -24,12 +25,19 @@ const projectsData = [
         description: 'Lead designer for key features within the Hyundai photo booth. Focused on improving user engagement and creating a seamless and intuitive experience for users to capture and share their photos. Collaborated closely with Hyundai developers.',
         image: hyundai_project,
         link: 'https://www.figma.com/design/Ux9T7KoPki5ok432YkUrNj/hyundai?node-id=0-1&t=vGa8nNbdgIR0AUVl-1' // Placeholder link
-    }
+    },
+    {
+        title: 'ENPPI',
+        description: 'Engineering the Future of Energy ENPPI delivers integrated engineering, procurement, construction management, and project management solutions across the energy sector. With decades of engineering expertise, ENPPI transforms complex challenges into reliable, innovative, and sustainable projects.',
+        image: enppi_project,
+        link: 'https://www.figma.com/design/opwMttCYQ8kUcknmaqoUrl/Enppi?node-id=0-1&t=AnynmOmaxEiCFADa-1' // Placeholder link
+    },
+
 ];
 
 const Projects = () => {
     return (
-        <section id="projects" className="py-20 bg-white">
+        <section id="projects" className="py-20 bg-ivory">
             <div className="max-w-7xl mx-auto px-6">
                 <SectionTitle title="Featured Projects" subtitle="My Work" />
 

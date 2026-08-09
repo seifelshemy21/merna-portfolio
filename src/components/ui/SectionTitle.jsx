@@ -9,7 +9,7 @@ const SectionTitle = ({ title, subtitle, className = '' }) => {
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-sm font-semibold tracking-widest text-gray-500 uppercase block mb-2"
+                    className="text-sm font-semibold tracking-widest text-gold uppercase block mb-2"
                 >
                     {subtitle}
                 </motion.span>
@@ -19,7 +19,7 @@ const SectionTitle = ({ title, subtitle, className = '' }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-3xl md:text-4xl font-bold text-black"
+                className="text-3xl md:text-4xl font-bold text-charcoal"
             >
                 {title}
             </motion.h2>
@@ -28,7 +28,7 @@ const SectionTitle = ({ title, subtitle, className = '' }) => {
                 whileInView={{ scaleX: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="h-1 w-20 bg-black mt-4 origin-left"
+                className="h-1 w-20 bg-rose mt-4 origin-left"
             />
         </div>
     );

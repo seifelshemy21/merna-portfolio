@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-white text-gray-900 min-h-screen font-sans selection:bg-black selection:text-white">
+    <div className="bg-ivory text-charcoal min-h-screen font-sans selection:bg-rose selection:text-ivory">
       <Navbar />
       <main>
         <Hero />
