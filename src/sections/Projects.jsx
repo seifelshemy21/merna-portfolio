@@ -5,6 +5,7 @@ import kroo_project from '../assets/kroo-project-img.jpeg'
 import oasis_project from '../assets/oasis_project.png'
 import hyundai_project from '../assets/hyundai_project.png'
 import enppi_project from '../assets/enppi_project.png'
+import beshay_bathroom_customization_project from '../assets/beshay.jpg'
 
 
 const projectsData = [
@@ -31,6 +32,12 @@ const projectsData = [
         description: 'Engineering the Future of Energy ENPPI delivers integrated engineering, procurement, construction management, and project management solutions across the energy sector. With decades of engineering expertise, ENPPI transforms complex challenges into reliable, innovative, and sustainable projects.',
         image: enppi_project,
         link: 'https://www.figma.com/design/opwMttCYQ8kUcknmaqoUrl/Enppi?node-id=0-1&t=AnynmOmaxEiCFADa-1' // Placeholder link
+    },
+    {
+        title: 'Beshay Bathroom Customization',
+        description: 'A modern bathroom customization app that lets users explore, mix, and match tiles, sinks, and bathroom elements to create their perfect design.',
+        image: beshay_bathroom_customization_project,
+        link: 'https://www.figma.com/proto/wyk2jtrC9sTflYgzhppSN9/Beshay?node-id=51-85&page-id=0%3A1&t=wUwmrVTpU5LW4gAy-1' // Placeholder link
     },
 
 ];
